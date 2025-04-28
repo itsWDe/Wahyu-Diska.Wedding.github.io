@@ -170,63 +170,133 @@
     </div>
   </section>
 
-  <section id="story" class="story">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-10 text-center">
-          <span>Bagaimana Cinta Kami Bersemi</span>
-          <h2>Cerita Kami</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <ul class="timeline">
-            <li>
-              <div class="timeline-image" style="background-image: url(img/Bareng2.JPG);"></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h3>Pertama Bertemu</h3>
-                  <span>11 November 2019</span>
-                </div>
-                <div class="timeline-body">
-                  <p>isian ngikut ayang
-                  </p>
-                </div>
-              </div>
-
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image" style="background-image: url(img/Bareng3.JPG);"></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h3>Mulai Serius</h3>
-                  <span>4 Januari 2021</span>
-                </div>
-                <div class="timeline-body">
-                  <p>isian ngikut ayang
-                  </p>
-                </div>
-              </div>
-
-            </li>
-            <li>
-              <div class="timeline-image" style="background-image: url(img/Bareng.JPG);"></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h3>Tunangan</h3>
-                  <span>6 April 2025</span>
-                </div>
-                <div class="timeline-body">
-                  isi manual
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+  <section id="story" class="story" style="background: #ffffff; padding: 50px 0;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-10 text-center">
+        <h2 style="font-family: 'Georgia', serif; font-weight: bold; margin-bottom: 30px;">LOVE STORY</h2>
       </div>
     </div>
-  </section>
+
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-icon">❤</div>
+        <div class="timeline-content">
+          <img src="img/Bareng2.JPG" alt="Pertama Bertemu">
+          <h3>Pertemuan</h3>
+          <span>11 November 2019</span>
+          <p>Kami bertemu pada tahun 2019 di tempat kerja yang sama...</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">❤</div>
+        <div class="timeline-content">
+          <img src="img/Bareng3.JPG" alt="Mulai Serius">
+          <h3>Mulai Serius</h3>
+          <span>4 Januari 2021</span>
+          <p>Setelah beberapa waktu, kami memutuskan untuk lebih serius dalam hubungan...</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">❤</div>
+        <div class="timeline-content">
+          <img src="img/Bareng.JPG" alt="Tunangan">
+          <h3>Tunangan</h3>
+          <span>6 April 2025</span>
+          <p>Di tahun 2025 kami mengikat janji dengan pertunangan...</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Timeline Basic */
+.timeline {
+  position: relative;
+  margin: 50px 0;
+  padding-left: 30px;
+  border-left: 3px solid #E5DCC3;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #E5DCC3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -12px;
+  background: #fff;
+  color: #FF6B6B;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  border: 2px solid #FF6B6B;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #f7f4ef;
+  border-radius: 10px;
+  margin-left: 40px;
+}
+
+.timeline-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.timeline-content span {
+  font-size: 14px;
+  color: gray;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-icon {
+    left: -10px;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .timeline-content {
+    margin-left: 35px;
+    padding: 15px;
+  }
+}
+</style>
 
   <section id="gallery" class="gallery">
     <div class="container">
