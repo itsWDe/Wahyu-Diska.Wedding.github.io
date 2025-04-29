@@ -78,25 +78,28 @@ body {
   text-transform: uppercase;
 }
 
-home {
+.home {
   background-image: url('img/bg.png'); /* Pastikan path gambar benar */
   background-size: cover;
-  min-height: 100vh;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  /* display: flex; /* Kita tidak menggunakan flex di sini untuk tata letak per bagian */
-  /* flex-direction: column; */
-  /* justify-content: center; */
+  min-height: 100vh; /* Pastikan section home setinggi layar */
+  padding-top: 0; /* Hapus padding atas */
+  padding-bottom: 0; /* Hapus padding bawah */
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between; /* Distribusikan ruang antara elemen */
 }
 
 /* Style untuk bagian pertama (latar belakang putih) */
 .home .first-part {
   background-color: white;
   padding: 8rem 2rem;
-  margin-bottom: 30px; /* Beri jarak dengan bagian selanjutnya */
   width: 100%; /* Lebar penuh container */
+  min-height: 100vh; /* Membuat bagian ini setinggi layar juga */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pusatkan konten di tengah layar */
 }
 
 .home .first-part h2 {
@@ -121,7 +124,10 @@ home {
 
 /* Style untuk bagian kalimat pembuka */
 .home .invitation-opener {
+  margin-top: 30px; /* Tambahkan margin atas agar tidak terlalu rapat dengan bagian putih */
   margin-bottom: 30px; /* Beri jarak dengan bagian selanjutnya */
+  padding: 2rem; /* Beri sedikit padding */
+  /* background-color: rgba(255, 255, 255, 0.8); /* Optional: latar belakang semi-transparan */
 }
 
 .home .invitation-opener p {
@@ -132,13 +138,16 @@ home {
 
 /* Style untuk bagian couple */
 .home .couple {
-  margin-top: 30px;
+  margin-top: auto; /* Dorong ke bawah */
+  margin-bottom: 5rem; /* Beri margin bawah */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
   width: 100%;
   max-width: 960px;
+  padding: 2rem; /* Beri sedikit padding */
+  /* background-color: rgba(255, 255, 255, 0.8); /* Optional: latar belakang semi-transparan */
 }
 
 .home .couple > div {
@@ -193,12 +202,14 @@ home {
 
 @media (max-width: 768px) {
   .home {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: flex-start; /* Atur ulang agar tidak terlalu terpencar di layar kecil */
   }
 
   .home .first-part {
     padding: 6rem 1.5rem;
+    min-height: auto; /* Biarkan tingginya menyesuaikan konten */
     margin-bottom: 20px;
   }
 
@@ -215,7 +226,9 @@ home {
   }
 
   .home .invitation-opener {
+    margin-top: 20px;
     margin-bottom: 20px;
+    padding: 1.5rem;
   }
 
   .home .invitation-opener p {
@@ -225,7 +238,8 @@ home {
   .home .couple {
     flex-direction: column;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 3rem;
   }
 
   .home .couple > div {
