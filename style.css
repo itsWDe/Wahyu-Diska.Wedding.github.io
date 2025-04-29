@@ -78,150 +78,171 @@ body {
   text-transform: uppercase;
 }
 
-.home {
-  background-image: url(img/bg.png);
+home {
+  background-image: url('img/bg.png'); /* Pastikan path gambar benar */
   background-size: cover;
   min-height: 100vh;
-  padding-top: 10rem; /* Sesuaikan padding atas */
+  padding-top: 5rem;
   padding-bottom: 5rem;
-  display: flex; /* Gunakan flexbox untuk mengatur konten utama */
-  flex-direction: column; /* Atur elemen menjadi kolom */
-  justify-content: center; /* Pusatkan konten secara vertikal */
-  align-items: center; /* Pusatkan konten secara horizontal */
-  text-align: center; /* Pusatkan teks secara default di dalam .home */
+  /* display: flex; /* Kita tidak menggunakan flex di sini untuk tata letak per bagian */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
 }
 
-.invitation-message {
-  margin-bottom: 50px; /* Beri jarak antara pesan dan bagian couple */
+/* Style untuk bagian pertama (latar belakang putih) */
+.home .first-part {
+  background-color: white;
+  padding: 8rem 2rem;
+  margin-bottom: 30px; /* Beri jarak dengan bagian selanjutnya */
+  width: 100%; /* Lebar penuh container */
 }
 
-.invitation-message h2,
-.invitation-details h2,
-.info h2,
-.story h2,
-.gallery h2,
-.rsvp h2,
-.gifts h2 {
+.home .first-part h2 {
   color: var(--pink);
-  font-family: 'Sacramento', cursive; /* Tambahkan cursive jika kamu menggunakan font itu */
-  font-size: 3.5rem; /* Sesuaikan ukuran font */
+  font-family: 'Sacramento', cursive;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.invitation-message h3,
-.invitation-details h3 {
+.home .first-part h3 {
   color: #444;
-  font-size: 1.2rem; /* Sesuaikan ukuran font */
+  font-size: 1.2rem;
   margin-bottom: 0.8rem;
 }
 
-.invitation-message p,
-.invitation-details p {
-  font-size: 1rem; /* Sesuaikan ukuran font */
+.home .first-part p {
+  font-size: 1rem;
   color: #666;
   line-height: 1.6;
 }
 
+/* Style untuk bagian kalimat pembuka */
+.home .invitation-opener {
+  margin-bottom: 30px; /* Beri jarak dengan bagian selanjutnya */
+}
+
+.home .invitation-opener p {
+  font-size: 1.1rem;
+  color: #333; /* Warna teks pembuka */
+  line-height: 1.8;
+}
+
+/* Style untuk bagian couple */
 .home .couple {
-  margin-top: 30px; /* Sesuaikan margin atas */
-  display: flex; /* Atur couple menjadi flex container */
-  justify-content: center; /* Pusatkan item di dalam couple */
-  align-items: center; /* Pusatkan item secara vertikal */
-  gap: 30px; /* Beri jarak antar bagian mempelai */
-  width: 100%; /* Lebar penuh container home */
-  max-width: 960px; /* Lebar maksimum area couple */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 960px;
 }
 
 .home .couple > div {
-  flex: 1; /* Membuat kedua bagian mempelai memiliki lebar yang sama */
+  flex: 1;
 }
 
 .home .couple h3 {
-  font-family: 'Sacramento', cursive; /* Tambahkan cursive jika kamu menggunakan font itu */
-  font-size: 2rem; /* Sesuaikan ukuran font */
+  font-family: 'Sacramento', cursive;
+  font-size: 2rem;
   color: var(--pink);
-  margin-top: 10px; /* Beri jarak antara foto dan nama */
+  margin-top: 10px;
   margin-bottom: 0.5rem;
 }
 
 .home .couple p {
-  font-size: 0.9rem; /* Sesuaikan ukuran font */
+  font-size: 0.9rem;
   color: #666;
   line-height: 1.4;
 }
 
 .home .couple .photo-wrapper {
-  width: 150px; /* Sesuaikan ukuran foto */
-  height: 150px; /* Sesuaikan ukuran foto */
-  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari lingkaran */
-  border-radius: 50%; /* Membuat bentuk lingkaran */
-  margin: 0 auto; /* Memusatkan gambar secara horizontal */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Tambahkan sedikit bayangan */
+  width: 100px; /* Lebar untuk oval */
+  height: 150px; /* Tinggi untuk oval */
+  overflow: hidden;
+  border-radius: 50% / 30%; /* Bentuk oval vertikal dengan ujung membulat */
+  margin: 0 auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .home .couple img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Memastikan gambar mengisi lingkaran tanpa terdistorsi */
+  object-fit: cover;
 }
 
 .home .heart {
-  width: 40px; /* Sesuaikan ukuran hati */
-  height: 40px; /* Sesuaikan ukuran hati */
+  width: 40px;
+  height: 40px;
   background-color: white;
   display: flex;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  position: relative; /* Ubah ke relative agar tidak keluar dari konteks flex */
-  /* left: 50%; */
-  /* transform: translateX(-50%) translateY(65px); */
-  margin: 20px 0; /* Atur margin atas dan bawah untuk posisi */
+  position: relative;
+  margin: 20px 0;
 }
 
 .home .heart i {
   margin: auto;
   color: var(--pink);
-  font-size: 1.2rem; /* Sesuaikan ukuran ikon hati */
-}
-
-/* Style untuk bagian invitation-details */
-.invitation-details {
-  background-color: white; /* Latar belakang putih */
-  padding: 8rem 2rem; /* Sesuaikan padding */
-  text-align: center;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-  .home .couple {
-    flex-direction: column; /* Ubah menjadi kolom di layar kecil */
-    gap: 50px;
+  .home {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  .home .couple > div {
-    width: 80%; /* Lebar yang lebih besar di layar kecil */
-    margin: 0 auto; /* Pusatkan di layar kecil */
+  .home .first-part {
+    padding: 6rem 1.5rem;
+    margin-bottom: 20px;
   }
 
-  .home .heart {
-    position: relative; /* Sesuaikan posisi hati di layar kecil */
-    margin: 30px auto;
-    transform: none;
-  }
-
-  .invitation-message h2,
-  .invitation-details h2 {
+  .home .first-part h2 {
     font-size: 3rem;
   }
 
-  .invitation-message h3,
-  .invitation-details h3 {
+  .home .first-part h3 {
     font-size: 1.1rem;
   }
 
-  .invitation-message p,
-  .invitation-details p {
+  .home .first-part p {
     font-size: 0.95rem;
+  }
+
+  .home .invitation-opener {
+    margin-bottom: 20px;
+  }
+
+  .home .invitation-opener p {
+    font-size: 1rem;
+  }
+
+  .home .couple {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .home .couple > div {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .home .heart {
+    margin: 20px auto;
+  }
+
+  .home .couple h3 {
+    font-size: 1.8rem;
+  }
+
+  .home .couple p {
+    font-size: 0.85rem;
   }
 }
 .info {
