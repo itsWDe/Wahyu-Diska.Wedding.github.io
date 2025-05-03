@@ -157,7 +157,7 @@ body {
 }
 
 .image-background .couple .photo-wrapper {
-  width: 150px; /* Lebar untuk oval */
+  width: 100px; /* Lebar untuk oval */
   height: 150px; /* Tinggi untuk oval */
   overflow: hidden;
   border-radius: 50% / 30%; /* Bentuk oval vertikal dengan ujung membulat */
