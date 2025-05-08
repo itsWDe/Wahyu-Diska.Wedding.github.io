@@ -66,6 +66,7 @@ body {
 
 .mynavbar .offcanvas {
   height: 100vh;
+  max-width: 250px
 }
 
 .mynavbar .navbar-brand,
@@ -486,8 +487,10 @@ footer li {
     font-size: 2rem;
     text-align: center;
   }
-
-  .sticky-top {
+  .mynavbar .offcanvas {
+    max-width: 250px
+  }
+   .sticky-top {
     overflow: hidden;
   }
 
@@ -508,10 +511,12 @@ footer li {
     margin: 3px;
   }
     .mynavbar .nav-link {
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
   }
-
+ .mynavbar .offcanvas {
+    max-width: 200px
+  }
   .timeline li .timeline-image {
     width: 80px;
     height: 80px;
