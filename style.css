@@ -37,6 +37,7 @@ body {
 .hero h1 {
   font-family: 'Sacramento', cursive;
   font-size: 6rem;
+  font-weight: bold;
 }
 
 .hero h4 {
@@ -78,161 +79,102 @@ body {
   text-transform: uppercase;
 }
 
-.full-height-slide {
-  min-height: 100vh; /* Membuat setiap section setinggi layar */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem; /* Beri sedikit padding umum */
+.home {
+  background-image: url(img/bg.png);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -6rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 }
 
-.white-background {
-  background-color: white;
-  text-align: center;
-}
-
-.white-background h2 {
+.home h2{
   color: var(--pink);
-  font-family: 'Sacramento', cursive;
+  font-family: 'Sacramento';
   font-size: 3.5rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
 }
-
-.white-background h3 {
-  color: #444;
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
-}
-
-.white-background p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.6;
-}
-
-.image-background {
-  background-image: url('img/bg.png'); /* Pastikan path gambar benar */
-  background-size: cover;
-  text-align: center;
-}
-
-.image-background .invitation-opener {
-  margin-bottom: 30px;
-}
-
-.image-background .invitation-opener p {
-  font-size: 1.1rem;
-  color: #333; /* Warna teks pembuka */
-  line-height: 1.8;
-}
-
-.image-background .couple {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-  max-width: 960px;
-}
-
-.image-background .couple > div {
-  flex: 1;
-}
-
-.image-background .couple h3 {
-  font-family: 'Sacramento', cursive;
-  font-size: 2rem;
+.info h2,
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
   color: var(--pink);
-  margin-top: 10px;
-  margin-bottom: 0.5rem;
+  font-family: 'Sacramento';
+  font-size: 5rem;
+  font-weight: bold;
 }
 
-.image-background .couple p {
-  font-size: 0.9rem;
+.home h3 {
+  color: #444;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.1rem;
   color: #666;
-  line-height: 1.4;
 }
 
-.image-background .couple .photo-wrapper {
-  width: 100px; /* Lebar untuk oval */
-  height: 150px; /* Tinggi untuk oval */
-  overflow: hidden;
-  border-radius: 50% / 30%; /* Bentuk oval vertikal dengan ujung membulat */
-  margin: 0 auto;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.image-background .couple img {
+.home .couple {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column; /* Mengubah arah tata letak menjadi kolom */
+  align-items: center;      /* Agar item berada di tengah horizontal */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 500px;        /* Lebar maksimum container pasangan (opsional) */
+  margin: 0 auto;         /* Membuat container berada di tengah (opsional) */
 }
 
-.image-background .heart {
-  width: 40px;
-  height: 40px;
+.home .couple > div {
+  text-align: center;       /* Teks di dalam div pasangan berada di tengah */
+  width: 100%;             /* Setiap div mengambil lebar penuh container */
+  margin-bottom: 20px;      /* Jarak antara div Wahyu dan Diska */
+}
+
+.home .couple h3 {
+  font-family: 'Sacramento';
+  font-size: 2.4rem;
+  color: var(--pink);
+}
+
+.home .couple p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.home .couple .photo-wrapper {
+  width: 200px;           /* Lebar untuk oval */
+  height: 300px;          /* Tinggi untuk oval */
+  overflow: hidden;       /* Menyembunyikan bagian gambar di luar oval */
+  border-radius: 50% / 30%;  /* Membuat bentuk oval */
+  margin: 0 auto 10px;    /* Membuat oval berada di tengah div dan memberi jarak bawah */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Efek bayangan tipis */
+}
+
+.home .couple img {
+  width: 100%;           /* Gambar mengisi lebar oval */
+  height: 100%;          /* Gambar mengisi tinggi oval */
+  object-fit: cover;      /* Memastikan gambar menutupi area dengan sempurna */
+}
+
+.home .heart {
+  width: 50px;
+  height: 50px;
   background-color: white;
   display: flex;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  position: relative;
-  margin: 20px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(65px);
 }
 
-.image-background .heart i {
+.home .heart i {
   margin: auto;
   color: var(--pink);
-  font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-  .full-height-slide {
-    min-height: auto; /* Biarkan tinggi menyesuaikan konten di layar kecil */
-    padding: 1.5rem;
-  }
-
-  .white-background h2 {
-    font-size: 3rem;
-  }
-
-  .white-background h3 {
-    font-size: 1.1rem;
-  }
-
-  .white-background p {
-    font-size: 0.95rem;
-  }
-
-  .image-background .invitation-opener p {
-    font-size: 1rem;
-  }
-
-  .image-background .couple {
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 20px;
-  }
-
-  .image-background .couple > div {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .image-background .heart {
-    margin: 20px auto;
-  }
-
-  .image-background .couple h3 {
-    font-size: 1.8rem;
-  }
-
-  .image-background .couple p {
-    font-size: 0.85rem;
-  }
-}
 .info {
   background-color: var(--bg);
   color: white;
