@@ -394,31 +394,174 @@
     </div>
   </section>
 
+<style>
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background: #a28b72;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 220px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .kartu {
+            background-image:url(img/kartu.png);
+            color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px auto;
+            max-width: 400px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .kartu-header-atm {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .kartu-logo-atm {
+            width: auto;
+            height: 50px;
+        }
+
+        .kartu-chip {
+            width: auto;
+            height: 80px;
+            margin-right: auto;
+            margin-left: 10px;
+        }
+
+        .kartu-content-atm {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .kartu-account-number-atm {
+            margin: 0 0 5px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            color: #111;
+            font-weight: bold;
+            text-align: center;
+             margin-top: 30px;
+        }
+
+        .kartu-account-holder-atm {
+            font-size: 0.9em;
+            color: #111;
+            text-align: center;
+             margin-top: 1px;
+        }
+
+        .copy-btn {
+            background: rgba(255,255,255,0.9);
+            color: #2c2c2c;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 0.8em;
+            align-self: center;
+        }
+
+        .box {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin: 15px auto;
+            max-width: 360px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .box h3 { margin-bottom: 10px; }
+   }
+    </style>
   <section id="gifts" class="gifts">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
           <span>ungkapan tanda kasih</span>
           <h2>Kirim Hadiah</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure perferendis provident ab aliquam nemo.
-          </p>
+          <p>Jika ingin berbagi tanda kasih, Anda dapat memilih salah satu opsi di bawah ini:</p>
         </div>
       </div>
+<div class="btn-group">
+        <button class="btn" onclick="showSection('amplop')">💌 Amplop Online</button>
+        <button class="btn" onclick="showSection('kado')">🎁 Kirim Kado</button>
+        <a href="https://wa.me/6285697231669?text=Hai saya [nama] mau konfirmasi pengiriman amplop online sebesar [00.000] mohon di cek di mobile banking semoga berkah ya acaranya." class="btn" target="_blank">✅ Konfirmasi Mempelai</a>
+    </div>
 
-      <div class="row justify-content-center text-center">
-        <div class="col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <div class="fw-bold">BCA</div>
-              123456789 - Diska Nur Rahma
-            </li>
-            <li class="list-group-item">
-              <div class="fw-bold">MANDIRI</div>
-              987654321 - Diska Nur Rahma
-            </li>
-          </ul>
+    <div class="section" id="amplop">
+        <div class="kartu">
+            <div class="kartu-header-atm">
+                <img src="img/chip.png" alt="Chip kartu" class="kartu-chip">  
+                <img src="img/bri.png" alt="Logo BRI" class="kartu-logo-atm">
+            </div>
+            <div class="kartu-content-atm">
+                <h3 class="kartu-account-number-atm">673101024369530</h3>
+                <p class="kartu-account-holder-atm">A/n Diska Nur Rahma</p>
+                <button class="copy-btn" onclick="copyText('673101024369530')">Salin No. Rekening</button>
+            </div>
         </div>
-      </div>
+        <div class="kartu">
+             <div class="kartu-header-atm">
+                <img src="img/chip.png" alt="Chip kartu" class="kartu-chip">  
+                <img src="img/mandiri.png" alt="Logo Mandiri" class="kartu-logo-atm">
+            </div>
+            <div class="kartu-content-atm">
+                <h3 class="kartu-account-number-atm">1380023179208</h3>
+                <p class="kartu-account-holder-atm">A/n Diska Nur Rahma</p>
+                <button class="copy-btn" onclick="copyText('1380023179208')">Salin No. Rekening</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="kado">
+        <div class="box">
+            <h3>Alamat Pengiriman Kado:</h3>
+            <p id="alamat">RT 03,RW 6, Kaliwuluh, Jurangjero, Ngawen, Gunungkidul, Yogyakarta 55853</p>
+            <button class="copy-btn" onclick="copyText('RT 03,RW 6, Kaliwuluh, Jurangjero, Ngawen, Gunungkidul, Yogyakarta 55853')">Salin Alamat</button>
+        </div>
+    </div>
     </div>
   </section>
 
